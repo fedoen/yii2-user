@@ -1,5 +1,8 @@
 # CHANGELOG
 
+# 1.0.0 [26 October 2023]
+- Fix: namespace
+
 - Fix: Update last_login_at when successfully logged in over oauth(#899)
 
 ## 0.9.12 [11 January 2017]
