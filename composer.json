@@ -1,6 +1,6 @@
 {
     "name": "fedoen/yii2-user",
-    "description": "Flexible user registration and authentication module for Yii2 clone from dektrium/yii2-user",
+    "description": "Flexible user registration and authentication module for Yii2 clone from fedoen/yii2-user",
     "keywords": ["yii2", "yii2-user", "user management", "fedoen"],
     "type": "yii2-extension",
     "license": "MIT",

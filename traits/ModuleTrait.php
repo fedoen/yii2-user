@@ -1,14 +1,14 @@
 <?php
 
-namespace dektrium\user\traits;
+namespace fedoen\user\traits;
 
-use dektrium\user\Module;
+use fedoen\user\Module;
 
 /**
  * Trait ModuleTrait
  *
  * @property-read Module $module
- * @package dektrium\user\traits
+ * @package fedoen\user\traits
  */
 trait ModuleTrait
 {

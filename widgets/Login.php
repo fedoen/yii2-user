@@ -3,15 +3,15 @@
 /*
  * This file is part of the Dektrium project.
  *
- * (c) Dektrium project <http://github.com/dektrium>
+ * (c) Dektrium project <http://github.com/fedoen>
  *
  * For the full copyright and license information, please view the LICENSE.md
  * file that was distributed with this source code.
  */
 
-namespace dektrium\user\widgets;
+namespace fedoen\user\widgets;
 
-use dektrium\user\models\LoginForm;
+use fedoen\user\models\LoginForm;
 use yii\base\Widget;
 
 /**

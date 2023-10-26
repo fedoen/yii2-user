@@ -3,7 +3,7 @@
 /*
  * This file is part of the Dektrium project.
  *
- * (c) Dektrium project <http://github.com/dektrium>
+ * (c) Dektrium project <http://github.com/fedoen>
  *
  * For the full copyright and license information, please view the LICENSE.md
  * file that was distributed with this source code.
@@ -19,7 +19,7 @@ use yii\widgets\Pjax;
 /**
  * @var \yii\web\View $this
  * @var \yii\data\ActiveDataProvider $dataProvider
- * @var \dektrium\user\models\UserSearch $searchModel
+ * @var \fedoen\user\models\UserSearch $searchModel
  */
 
 $this->title = Yii::t('user', 'Manage users');

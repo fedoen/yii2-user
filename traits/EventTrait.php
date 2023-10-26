@@ -3,25 +3,25 @@
 /*
  * This file is part of the Dektrium project.
  *
- * (c) Dektrium project <http://github.com/dektrium/>
+ * (c) Dektrium project <http://github.com/fedoen/>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
-namespace dektrium\user\traits;
+namespace fedoen\user\traits;
 
-use dektrium\user\events\AuthEvent;
-use dektrium\user\events\ConnectEvent;
-use dektrium\user\events\FormEvent;
-use dektrium\user\events\ProfileEvent;
-use dektrium\user\events\ResetPasswordEvent;
-use dektrium\user\events\UserEvent;
-use dektrium\user\models\Account;
-use dektrium\user\models\Profile;
-use dektrium\user\models\RecoveryForm;
-use dektrium\user\models\Token;
-use dektrium\user\models\User;
+use fedoen\user\events\AuthEvent;
+use fedoen\user\events\ConnectEvent;
+use fedoen\user\events\FormEvent;
+use fedoen\user\events\ProfileEvent;
+use fedoen\user\events\ResetPasswordEvent;
+use fedoen\user\events\UserEvent;
+use fedoen\user\models\Account;
+use fedoen\user\models\Profile;
+use fedoen\user\models\RecoveryForm;
+use fedoen\user\models\Token;
+use fedoen\user\models\User;
 use yii\authclient\ClientInterface;
 use yii\base\Model;
 

@@ -3,15 +3,15 @@
 /*
  * This file is part of the Dektrium project.
  *
- * (c) Dektrium project <http://github.com/dektrium/>
+ * (c) Dektrium project <http://github.com/fedoen/>
  *
  * For the full copyright and license information, please view the LICENSE.md
  * file that was distributed with this source code.
  */
 
-namespace dektrium\user\commands;
+namespace fedoen\user\commands;
 
-use dektrium\user\Finder;
+use fedoen\user\Finder;
 use Yii;
 use yii\console\Controller;
 use yii\helpers\Console;
@@ -19,7 +19,7 @@ use yii\helpers\Console;
 /**
  * Updates user's password.
  *
- * @property \dektrium\user\Module $module
+ * @property \fedoen\user\Module $module
  *
  * @author Dmitry Erofeev <dmeroff@gmail.com>
  */

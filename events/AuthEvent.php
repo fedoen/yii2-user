@@ -3,15 +3,15 @@
 /*
  * This file is part of the Dektrium project.
  *
- * (c) Dektrium project <http://github.com/dektrium/>
+ * (c) Dektrium project <http://github.com/fedoen/>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
-namespace dektrium\user\events;
+namespace fedoen\user\events;
 
-use dektrium\user\models\Account;
+use fedoen\user\models\Account;
 use yii\authclient\ClientInterface;
 use yii\base\Event;
 

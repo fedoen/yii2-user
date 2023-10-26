@@ -3,13 +3,13 @@
 /*
  * This file is part of the Dektrium project.
  *
- * (c) Dektrium project <http://github.com/dektrium/>
+ * (c) Dektrium project <http://github.com/fedoen/>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
-use dektrium\user\migrations\Migration;
+use fedoen\user\migrations\Migration;
 
 class m151218_234654_add_timezone_to_profile extends Migration
 {
