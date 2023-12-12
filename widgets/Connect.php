@@ -23,6 +23,7 @@ use yii\helpers\Url;
  */
 class Connect extends AuthChoice
 {
+
     /**
      * @var array|null An array of user's accounts
      */
@@ -68,5 +69,57 @@ class Connect extends AuthChoice
     public function isConnected(ClientInterface $provider)
     {
         return $this->accounts != null && isset($this->accounts[$provider->getId()]);
+    }
+
+    /**
+     * Renders the main content, which includes all external services links.
+     * @return string the rendering result.
+     */
+    protected function renderMainContent()
+    {
+        $items = [];
+        foreach ($this->getClients() as $externalService) {
+            if ($externalService->getName() === 'facebook') {
+                $items[] = $this->renderCustomFacebookButton($externalService);
+            } elseif ($externalService->getName() === 'google') {
+                $items[] = $this->renderCustomGoogleButton($externalService);
+            } else {
+                $items[] = $this->clientLink($externalService);
+            }
+        }
+        return Html::tag('div', implode('', $items), ['class' => 'social-auth-links text-center mb-3 d-grid gap-2']);
+    }
+
+    /**
+     * Renders a custom Facebook button.
+     * @param \yii\authclient\ClientInterface $client the external auth client instance.
+     * @return string the rendering result
+     */
+    protected function renderCustomFacebookButton($client)
+    {
+        $title = Yii::t('user', 'Connect with Facebook');
+        $icon = '<i class="bi bi-facebook me-2"></i>'; // Adjust icon HTML as needed
+        $url = $this->createClientUrl($client);
+
+        return Html::a($icon . ' ' . Html::encode($title), $url, [
+                    'class' => 'btn btn-primary btn-facebook',
+                        // Add any other options for the link here
+        ]);
+    }
+
+    /**
+     * Renders a custom Google button.
+     * @param \yii\authclient\ClientInterface $client the external auth client instance.
+     * @return string the rendering result
+     */
+    protected function renderCustomGoogleButton($client)
+    {
+        $title = Yii::t('user', 'Connect with Google');
+        $icon = '<i class="bi bi-google me-2"></i>'; // Adjust icon HTML as needed
+        $url = $this->createClientUrl($client);
+
+        return Html::a($icon . ' ' . Html::encode($title), $url, [
+                    'class' => 'btn btn-danger btn-google',
+        ]);
     }
 }
