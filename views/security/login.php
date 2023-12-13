@@ -25,12 +25,10 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 
 <?= $this->render('/_alert', ['module' => Yii::$app->getModule('user')]) ?>
-
 <div class="card card-outline card-primary">
-    <div class="card-header"><a href="../index2.html" class="link-dark text-center link-offset-2 link-opacity-100 link-opacity-50-hover">
-            <h1 class="mb-0"><b><?= Yii::$app->name ?></b>
-            </h1>
-        </a></div>
+    <div class="card-header">
+        <?= Html::a('<h3 class="mb-0"><b>' . Yii::$app->name . '</b></h3>', ['/site/index'], ['class' => 'link-dark text-center link-offset-2 link-opacity-100 link-opacity-50-hover text-decoration-none']) ?>
+    </div>
     <div class="card-body login-card-body">
         <p class="login-box-msg">Sign in to start your session</p>
         <?php
@@ -44,19 +42,20 @@ $this->params['breadcrumbs'][] = $this->title;
                 ])
         ?>
         <div class="input-group mb-3">  
-            <?php
-            echo Html::activeTextInput($model, 'login', ['class' => 'form-control', 'placeholder' => 'Utilizator', 'autofocus' => 'autofocus']);
-            echo Html::error($model, 'login');
-            ?>
-            <div class="input-group-text"><span class="bi bi-envelope"></span></div>
+            <?= Html::activeTextInput($model, 'login', ['class' => 'form-control', 'placeholder' => 'Utilizator', 'autofocus' => 'autofocus']) ?>
+            <div class="input-group-text"><span class="bi bi-envelope-fill"></span></div>
+        </div>
+        <div clas='invalid-feedback'>
+            <?= Html::error($model, 'login') ?>
         </div>
         <div class="input-group mb-3">
-            <?php
-            echo Html::activePasswordInput($model, 'password', ['class' => 'form-control', 'placeholder' => 'Utilizator']);
-            echo Html::error($model, 'password');
-            ?>
+            <?= Html::activePasswordInput($model, 'password', ['class' => 'form-control', 'placeholder' => 'Password']) ?>
             <div class="input-group-text"><span class="bi bi-lock-fill"></span></div>
         </div><!--begin::Row-->
+        <div clas='invalid-feedback'>
+            <?= Html::error($model, 'password') ?>
+        </div>
+
         <div class="row">
             <div class="col-8">
                 <div class="form-check">
@@ -77,7 +76,7 @@ $this->params['breadcrumbs'][] = $this->title;
             </div><!-- /.col -->
         </div><!--end::Row-->
         <?php ActiveForm::end(); ?>
-        <p class="text-center">- OR -</p>
+        <p class="text-center">- <?= Yii::t('user', 'OR') ?> -</p>
         <?=
         Connect::widget([
             'baseAuthUrl' => ['/user/security/auth'],

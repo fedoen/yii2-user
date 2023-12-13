@@ -18,6 +18,7 @@
  */
 return array (
     '#' => '',
+    'OR' => 'SAU',
     'Are you sure you want to switch to this user for the rest of this Session?' => 'Sigur doriți să comutați la acest utilizator pentru restul acestei sesiuni?',
     'Are you sure?' => 'Esti sigur?',
     'Are you sure? There is no going back' => 'Esti sigur? Nu este reversibil',
@@ -141,6 +142,7 @@ return array (
     'Registration time' => 'Data înregistrării',
     'Remember me next time' => 'Ține-mă minte',
     'Request new confirmation message' => 'Retrimite instrucțiunile',
+    'Request new password' => 'Solicita o parola noua',
     'Reset your password' => 'Resetează parola',
     'Roles' => 'Roluri',
     'Save' => 'Salvează',

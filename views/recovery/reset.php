@@ -21,25 +21,37 @@ use yii\widgets\ActiveForm;
 $this->title = Yii::t('user', 'Reset your password');
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="row">
-    <div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3">
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h3 class="panel-title"><?= Html::encode($this->title) ?></h3>
-            </div>
-            <div class="panel-body">
-                <?php $form = ActiveForm::begin([
-                    'id' => 'password-recovery-form',
-                    'enableAjaxValidation' => true,
-                    'enableClientValidation' => false,
-                ]); ?>
-
-                <?= $form->field($model, 'password')->passwordInput() ?>
-
-                <?= Html::submitButton(Yii::t('user', 'Finish'), ['class' => 'btn btn-success btn-block']) ?><br>
-
-                <?php ActiveForm::end(); ?>
-            </div>
+<div class="d-flex justify-content-center">
+    <div class="card card-outline card-primary">
+        <div class="card-header">
+            <?= Html::a('<h3 class="mb-0"><b>' . Yii::$app->name . '</b></h3>', ['/site/index'], ['class' => 'link-dark text-center link-offset-2 link-opacity-100 link-opacity-50-hover text-decoration-none']) ?>
         </div>
+        <div class="card-body">
+            <p class="login-box-msg"><?= Html::encode($this->title) ?></p>
+            <?php
+            $form = ActiveForm::begin([
+                        'id' => 'password-recovery-form',
+                        'enableAjaxValidation' => true,
+                        'enableClientValidation' => false,
+            ]);
+            ?>
+            <div class="input-group mb-3">
+                <?= Html::activePasswordInput($model, 'password', ['class' => 'form-control', 'placeholder' => 'Utilizator']) ?>
+                <div class="input-group-text"><span class="bi bi-lock-fill"></span></div>
+            </div><!--begin::Row-->
+            <div clas='invalid-feedback'>
+                <?= Html::error($model, 'password') ?>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <?= Html::submitButton(Yii::t('user', 'Finish'), ['class' => 'btn btn-primary btn-block w-100']) ?><br>
+                </div>
+                <!-- /.col -->
+            </div>
+
+            <?php ActiveForm::end(); ?>
+        </div>
+        <!-- /.login-card-body -->
     </div>
+
 </div>
