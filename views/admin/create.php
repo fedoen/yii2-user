@@ -29,8 +29,8 @@ $this->params['breadcrumbs'][] = $this->title;
 
 <div class="row">
     <div class="col-md-3">
-        <div class="panel panel-default">
-            <div class="panel-body">
+        <div class="card card-default">
+            <div class="card-body">
                 <?= Nav::widget([
                     'options' => [
                         'class' => 'nav-pills nav-stacked',
@@ -51,8 +51,8 @@ $this->params['breadcrumbs'][] = $this->title;
         </div>
     </div>
     <div class="col-md-9">
-        <div class="panel panel-default">
-            <div class="panel-body">
+        <div class="card card-default">
+            <div class="card-body">
                 <div class="alert alert-info">
                     <?= Yii::t('user', 'Credentials will be sent to the user by email') ?>.
                     <?= Yii::t('user', 'A password will be generated automatically if not provided') ?>.

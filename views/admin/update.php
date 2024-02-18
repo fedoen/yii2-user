@@ -1,5 +1,4 @@
 <?php
-
 /*
  * This file is part of the Dektrium project.
  *
@@ -16,7 +15,6 @@ use yii\bootstrap5\Nav;
  * @var \fedoen\user\models\User $user
  * @var string $content
  */
-
 $this->title = Yii::t('user', 'Update user account');
 $this->params['breadcrumbs'][] = ['label' => Yii::t('user', 'Users'), 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
@@ -28,11 +26,12 @@ $this->params['breadcrumbs'][] = $this->title;
 
 <div class="row">
     <div class="col-md-3">
-        <div class="panel panel-default">
-            <div class="panel-body">
-                <?= Nav::widget([
+        <div class="card">
+            <div class="card-body">
+                <?=
+                Nav::widget([
                     'options' => [
-                        'class' => 'nav-pills nav-stacked',
+                        'class' => 'list-group',
                     ],
                     'items' => [
                         [
@@ -90,13 +89,14 @@ $this->params['breadcrumbs'][] = $this->title;
                             ],
                         ],
                     ],
-                ]) ?>
+                ])
+                ?>
             </div>
         </div>
     </div>
     <div class="col-md-9">
-        <div class="panel panel-default">
-            <div class="panel-body">
+        <div class="card card-default">
+            <div class="card-body">
                 <?= $content ?>
             </div>
         </div>
