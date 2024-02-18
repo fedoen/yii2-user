@@ -33,8 +33,8 @@ $this->params['breadcrumbs'][] = $this->title;
             <div class="card-body">
                 <?= Nav::widget([
                     'options' => [
-                        'class' => 'nav-pills nav-stacked',
-                    ],
+                        'class' => 'nav-pills list-group',
+    ],
                     'items' => [
                         ['label' => Yii::t('user', 'Account details'), 'url' => ['/user/admin/create']],
                         ['label' => Yii::t('user', 'Profile details'), 'options' => [
