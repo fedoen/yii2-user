@@ -31,8 +31,8 @@ $this->params['breadcrumbs'][] = $this->title;
                 <?=
                 Nav::widget([
                     'options' => [
-                        'class' => 'list-group',
-                    ],
+                        'class' => 'nav-pills list-group',
+    ],
                     'items' => [
                         [
                             'label' => Yii::t('user', 'Account details'),
